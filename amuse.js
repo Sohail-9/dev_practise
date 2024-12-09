@@ -40,14 +40,19 @@ console.log(data);
 //   }
 // }
 
+//best to write middleware is 
+app.use(usermiddleware, (req, res, next){
+    next();
+});
+
 //amusemment park routing
-app.get("/rides", usermiddleware, function (req, res) {
+app.get("/rides", function (req, res) {
     res.status(200).json({
         msg: "u are eligible",
     });
 });
 //waterpark routing
-app.get("/water", usermiddleware, function (req, res) {
+app.get("/water", function (req, res) {
     res.status(200).json({
         msg: "user is under age",
     });
