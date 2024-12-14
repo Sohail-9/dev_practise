@@ -41,7 +41,7 @@ console.log(data);
 // }
 
 //best to write middleware is 
-app.use(usermiddleware, (req, res, next){
+app.use(usermiddleware, (req, res, next) => {
     next();
 });
 
